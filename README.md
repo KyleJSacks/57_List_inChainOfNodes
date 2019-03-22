@@ -1,1 +1,1 @@
-# 57_List_inChainOfNodes_v0
+# represent a list as a chain of nodes
