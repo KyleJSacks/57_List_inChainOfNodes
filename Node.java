@@ -14,11 +14,16 @@ public class Node {
      */
     public Node( Object cargoReference) {
 	this.cargoReference = cargoReference;
+	refToNextNode = null;
     }
      public Node( Object cargoReference, Node referenceToNextNode) {
         this.cargoReference = cargoReference;
 	setReferenceToNextNode(referenceToNextNode);
      }
+	 
+	 public Object getCargo(){
+		 return cargoReference;
+	 }
 
     /**
       @return a string representation of this instance

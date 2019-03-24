@@ -1,12 +1,12 @@
 /**
-  Represent a list, implemented in a chain of nodes
+  Represent a list, implemented in a chain of Nodes
  */
 
 public class List_inChainOfNodes{
     private Node headReference;
 
     public List_inChainOfNodes(){
-	headReference = new node();
+	headReference = new Node(null);
     }
      
 
@@ -14,6 +14,13 @@ public class List_inChainOfNodes{
       @return the number of elements in this list
      */
      public int size() {
+		 Node next = headReference;
+		 int size = 0;
+		 while (next.getReferenceToNextNode() != null){
+			 size++;
+			 next = next.getReferenceToNextNode();
+		 }
+		 return size;
 
      }
 
@@ -23,8 +30,16 @@ public class List_inChainOfNodes{
        format:
            # elements [element0,element1,element2,] 
       */
-    // public String toString() {
-    // }
+     public String toString() {
+		 Node next = headReference;
+		 String ans = "[";
+		 while (next.getReferenceToNextNode() != null){
+			 next = next.getReferenceToNextNode();
+			 ans += next.getCargo() + ",";
+		 }
+		 ans += "]";
+		 return ans;
+     }
     
     
     /**
@@ -33,6 +48,7 @@ public class List_inChainOfNodes{
       @return true, in keeping with conventions yet to be discussed
      */
      public boolean addAsHead( Object val) {
-        return true;
+        headReference.setReferenceToNextNode(new Node(val, headReference.getReferenceToNextNode()));
+		return true;
      }
 }
