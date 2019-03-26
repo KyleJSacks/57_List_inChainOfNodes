@@ -30,7 +30,14 @@ public class UserOfList {
 		 System.out.println(list.get(3));
 		 list.add(3, "o");
 		 System.out.println(list);
-		 list.remove(3);
+		 System.out.println(list.remove(3) + System.lineSeparator());
 		 System.out.println(list);
+		 System.out.println(list.set(0, "x") + System.lineSeparator());
+		 System.out.println(list);
+		 System.out.println(list.remove(0) + System.lineSeparator());
+		 System.out.println(list);
+		 list.add(0, "b");
+		 System.out.println(list);
+		 System.out.println(list.get(0));
     }
 }
