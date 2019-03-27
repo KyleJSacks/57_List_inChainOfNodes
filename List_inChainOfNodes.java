@@ -42,6 +42,15 @@ public class List_inChainOfNodes{
 			 index--;
 		 }
 		 return next.getReferenceToNextNode();
+		 /*For loop code:
+		 Node next = headReference;
+		 int ind = 0;
+		 for(ind, next;
+			 ind < index;
+			 index++, next = next.getReferenceToNextNode();
+			)
+		 return next;
+		 */
 	 }
 
 	 public Object get(int index){
